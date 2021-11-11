@@ -57,9 +57,15 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "sourceType": "module",
+      "project": [
+        "./tsconfig.json"
+      ],
       "ecmaFeatures": {
         "jsx": true
-      }
+      },
+      "project": [
+        "./tsconfig.json"
+      ]
     },
     "extends": [
       "react-app",
@@ -80,13 +86,13 @@
     "overrides": [
       {
         "files": [
-          "*.ts",
-          "*.tsx"
+          "*.js"
         ],
-        "parserOptions": {
-          "project": [
-            "./tsconfig.json"
-          ]
+        "rules": {
+          "@typescript-eslint/no-var-requires": "off",
+          "@typescript-eslint/no-unsafe-member-access": "off",
+          "@typescript-eslint/no-unsafe-call": "off",
+          "@typescript-eslint/no-unsafe-assignment": "off"
         }
       }
     ],

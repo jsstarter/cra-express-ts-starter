@@ -1,8 +1,7 @@
-import Config from './Config';
-import { createProxyMiddleware } from 'http-proxy-middleware';
-import { Application } from 'express';
+const Config = require('./Config');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
-const proxy = function (app: Application): void {
+const proxy = function (app) {
   if (Config.USE_PROXY) {
     app.use(
       '/api',
@@ -16,4 +15,4 @@ const proxy = function (app: Application): void {
   }
 };
 
-export default proxy;
+module.exports = proxy;

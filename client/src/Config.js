@@ -6,4 +6,4 @@ const Config = {
   SERVER_URL,
 };
 
-export default Config;
+module.exports = Config;
